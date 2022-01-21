@@ -56,13 +56,9 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     const meuRestaurante = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
 		expect(meuRestaurante.fetchMenu()).toEqual({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
 	}),
-     // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
-    // --------------------------------------------------------------------------------------
-	
   it ('Verifique se "objetoRetornado.consumption", após a criação do menu, retorna um array vazio.', () => {
-    // ```
-    // const objetoRetornado = createMenu(objetoQualquer);
-    // objetoRetornado.consumption // Retorno: []
+    const meuRestaurante = createMenu();
+		expect(meuRestaurante.consumption).toEqual([]);
     // ```
 
     // Agora faça o PASSO 2 no arquivo `src/restaurant.js`.
