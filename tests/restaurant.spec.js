@@ -59,10 +59,13 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
   it ('Verifique se "objetoRetornado.consumption", após a criação do menu, retorna um array vazio.', () => {
     const meuRestaurante = createMenu();
 		expect(meuRestaurante.consumption).toEqual([]);
+	}),
+	it ('Verifique se, ao chamar uma função associada à chave `order` no objeto retornado, passando uma string como parâmetro (como `objetoRetornado.order("coxinha")`), tal string é adicionada ao array retornado em `objetoRetornado.consumption`.', () => {
+    const meuRestaurante = createMenu();
+		meuRestaurante.order('coxinha');
+		expect(meuRestaurante.consumption).toEqual(['coxinha']);
     // ```
 
-    // Agora faça o PASSO 2 no arquivo `src/restaurant.js`.
-    // --------------------------------------------------------------------------------------
     // TESTE 5: Verifique se, ao chamar uma função associada à chave `order` no objeto retornado,
     // passando uma string como parâmetro (como `objetoRetornado.order('coxinha')`), tal string é adicionada
     // ao array retornado em `objetoRetornado.consumption`.
