@@ -15,12 +15,11 @@ const valores = Object.assign(menu[0][1], menu[1][1]);
 let soma = 0;
 for (let index = 0; index < restaurant.consumption.length; index += 1) {
 soma += valores[restaurant.consumption[index]];
-console.log(restaurant.consumption[index]);
 }
 return soma;
 },
 };
- return restaurant;
+return restaurant;
 };
 
 module.exports = createMenu;
